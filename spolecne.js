@@ -1,5 +1,16 @@
+const menuTlacitko = document.querySelector('#menu-tlacitko');
+const menu = document.querySelector('#menu-polozky');
+
 const pridatShow = () => {
-  document.querySelector('#menu-polozky').classList.toggle('show');
+ menu.classList.toggle('show')
+ if (menu.classList.contains('show') 
+  ) {
+    menuTlacitko.innerHTML = '<i class="fas fa-xmark"></i>';
+} else {
+    menuTlacitko.innerHTML = '<i class="fas fa-bars"></i>';
+}
 };
 
-document.querySelector('#menu-tlacitko').addEventListener('click', pridatShow);
+menuTlacitko.addEventListener('click', pridatShow);
+
+
