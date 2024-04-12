@@ -109,6 +109,7 @@ const filmy = [
 const poznamka = document.querySelector('#note-form');
 const checkbox = document.querySelector('#terms-checkbox');
 const textPoznamky = document.querySelector('#message-input');
+const vyplnenaPoznamka = document.querySelector('#note-form');
 
 
 	poznamka.addEventListener('submit', (event) => {
@@ -119,9 +120,13 @@ const textPoznamky = document.querySelector('#message-input');
 	} 
 	else if (textPoznamky.value !== '' && checkbox.checked === false) {
 		checkbox.classList.add('is-invalid');
-	}	
+	} 
+	else  (textPoznamky.value !== '' && checkbox.checked === true); {
+	vyplnenaPoznamka.innerHTML = `<p class="card-text"> ${textPoznamky.value} </p>`;
 
+}
 });
+
 
 
 
